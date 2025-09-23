@@ -2,17 +2,23 @@ package org.charter;
 
 public class Bus {
     String number;
-    String[] areas;
+    String pointA;
+    String pointB;
+    String importantAreas;
+    String extraSpecifications; // accounting for limited stops and other trailing details
 
-    public Bus(String number, String[] areas) {
+    Bus(String number, String pointA, String pointB, String importantAreas,
+        String extraSpecifications) {
         this.number = number;
-        this.areas = areas;
+        this.pointA = pointA;
+        this.pointB = pointB;
+        this.importantAreas = importantAreas;
+        this.extraSpecifications = extraSpecifications;
     }
 
-    public static void splitBusPlaceValues(String values) {
-        String[] splitValues = values.split(" ");
-        for (String value : splitValues) {
-            System.out.println(value);
-        } // sort out return value later
-    }
+    public static String[] splitBusPlaceValues(String values) {
+        String[] splitValues;
+        splitValues = values.split(" ");
+        return splitValues;
+    } // make this into the means of initialisation
 }
